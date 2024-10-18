@@ -30,31 +30,32 @@
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:layout_marginStart="51dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="52dp"
         android:fontFamily="@font/be_vietnam_pro"
         android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txtContraseña"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <EditText
         android:id="@+id/txtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_width="216dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="52dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="316dp" />
+        tools:layout_editor_absoluteY="327dp" />
 
     <EditText
         android:id="@+id/txtContraseña"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="219dp"
+        android:layout_height="52dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="152dp"
@@ -63,7 +64,7 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintHorizontal_bias="0.233"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblContraseña"
         app:layout_constraintVertical_bias="0.0" />
@@ -128,10 +129,10 @@
         android:text="@string/app_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         android:textColor="#480E92"
-        android:textSize="70sp"
+        android:textSize="96sp"
         app:layout_constraintBottom_toTopOf="@+id/lblEmail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.285" />
