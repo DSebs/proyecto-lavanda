@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LavandaApp"
         tools:targetApi="31" >
+
+        <!-- Otras actividades de tu aplicación -->
         <activity
             android:name=".frames.GestionPerfilActivity"
             android:exported="false" />
@@ -24,23 +26,23 @@
         <activity
             android:name=".frames.HomeClient"
             android:exported="false" />
-        <activity
-            android:name=".frames.StartClientActivity"
-            android:exported="false" />
+
+        <!-- Definir LoginActivity como actividad principal (MAIN) -->
         <activity
             android:name=".frames.LoginActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity ya no será la principal -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.LavandaApp" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.LavandaApp" />
 
         <meta-data
             android:name="preloaded_fonts"
