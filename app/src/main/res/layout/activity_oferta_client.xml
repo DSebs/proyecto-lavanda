@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frames.OfertaClient">
+
+    <Button
+        android:id="@+id/BtnOfertar"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="48dp"
+        android:background="#9E32B3"
+        android:text="¡Ofertar!"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/FondoRosita"
+        android:layout_width="344dp"
+        android:layout_height="194dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtDescripcion"
+        app:srcCompat="@drawable/rosita" />
+
+    <TextView
+        android:id="@+id/TxtCreaTuOferta"
+        android:layout_width="378dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/josefin_sans_bold_italic"
+        android:foregroundTint="#480E92"
+        android:foregroundTintMode="add"
+        android:text="¡Crea tu oferta!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#33175D"
+        android:textSize="52sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtDescripcion"
+        android:layout_width="342dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/josefin_sans"
+        android:text="Describe que cuidados requiere tu hogar."
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtCreaTuOferta" />
+
+    <ImageView
+        android:id="@+id/FondoRosita2"
+        android:layout_width="342dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtCuanto"
+        app:srcCompat="@drawable/rosita" />
+
+    <TextView
+        android:id="@+id/TxtEscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="200dp"
+        android:text="Escribe aqui."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TxtCreaTuOferta" />
+
+    <TextView
+        android:id="@+id/TxtCop"
+        android:layout_width="159dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="96dp"
+        android:text="00.0 COP"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/TxtCuanto" />
+
+    <TextView
+        android:id="@+id/TxtCuanto"
+        android:layout_width="321dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="46dp"
+        android:text="Cuanto deseas ofrecer por este servicio."
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FondoRosita" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
