@@ -15,6 +15,8 @@
         android:layout_marginStart="141dp"
         android:layout_marginTop="172dp"
         android:layout_marginEnd="142dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombreUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,52 +40,62 @@
         android:id="@+id/imageView3"
         android:layout_width="266dp"
         android:layout_height="175dp"
-        app:srcCompat="@drawable/rounded_edittext"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="391dp" />
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreUsuario"
+        app:srcCompat="@drawable/rounded_edittext" />
 
     <TextView
         android:id="@+id/lblInfoPerfil"
         android:layout_width="253dp"
         android:layout_height="33dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="96dp"
         android:fontFamily="@font/josefin_sans"
         android:text="Informacion de Usuario"
         android:textColor="#3B166A"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPerfilUsuario" />
 
     <TextView
         android:id="@+id/lblCorreo"
         android:layout_width="73dp"
         android:layout_height="29dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/josefin_sans"
         android:text="Correo: "
         android:textColor="#3B166A"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="441dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblInfoPerfil" />
 
     <TextView
         android:id="@+id/lblTelefono"
         android:layout_width="98dp"
         android:layout_height="29dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="9dp"
         android:fontFamily="@font/josefin_sans"
         android:text="Telefono: "
         android:textColor="#3B166A"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="483dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCorreo" />
 
     <TextView
         android:id="@+id/lblDireccion"
         android:layout_width="98dp"
         android:layout_height="29dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="19dp"
         android:fontFamily="@font/josefin_sans"
         android:text="Direccion: "
         android:textColor="#3B166A"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="521dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTelefono" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
