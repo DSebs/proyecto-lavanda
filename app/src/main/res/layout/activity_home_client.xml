@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frames.HomeClient">
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="379dp"
+        android:layout_height="315dp"
+        app:srcCompat="@drawable/rosita"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="329dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/rounded_button" />
+
+    <TextView
+        android:id="@+id/TxtLavanda"
+        android:layout_width="366dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="@font/courgette"
+        android:foregroundTint="#480E92"
+        android:foregroundTintMode="add"
+        android:text="@string/app_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#480E92"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="371dp"
+        android:layout_height="229dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtTuOferta"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/TxtPendiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="@font/josefin_sans_bold_italic"
+        android:foregroundTint="#480E92"
+        android:foregroundTintMode="add"
+        android:text="PENDIENTE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#33175D"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/josefin_sans_bold_italic"
+        android:foregroundTint="#480E92"
+        android:foregroundTintMode="add"
+        android:text="Estado:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#33175D"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toTopOf="@+id/BtnAgregar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TxtTuOferta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/josefin_sans_bold_italic"
+        android:foregroundTint="#480E92"
+        android:foregroundTintMode="add"
+        android:text="Tu oferta"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#33175D"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtLavanda" />
+
+    <Button
+        android:id="@+id/BtnAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="136dp"
+        android:background="#8563C7"
+        android:text="Hacer una oferta"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#252629"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/TxtPendiente" />
+
+    <Button
+        android:id="@+id/BtnPerfil"
+        android:layout_width="117dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="60dp"
+        android:background="#C59ECE"
+        android:text="Perfil"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BtnInicio"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="60dp"
+        android:background="#C08ECA"
+        android:text="Inicio"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
