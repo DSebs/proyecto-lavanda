@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "204521044691",
+    "project_id": "lavanda-app-1b25f",
+    "storage_bucket": "lavanda-app-1b25f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204521044691:android:e46b34bd33faa8fc80f226",
+        "android_client_info": {
+          "package_name": "com.ssldevteam.lavandaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmELd6d59e6KcNt6yiMZTo2mY0ux9lSdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
