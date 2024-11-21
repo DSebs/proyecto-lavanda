@@ -3,38 +3,72 @@ package com.ssldevteam.lavandaapp.frames
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 import com.ssldevteam.lavandaapp.R
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var btnLogin: Button
+    private lateinit var txtEmail: EditText
+    private lateinit var txtPassword: EditText
+    private lateinit var lblRegistroAct: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_login)
 
-        // Configurar insets
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        // Inicializar Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
-        // Configurar el botón para ir a HomeClient
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        // Enlazar los elementos de la vista
+        btnLogin = findViewById(R.id.btnLogin)
+        txtEmail = findViewById(R.id.txtEmail)
+        txtPassword = findViewById(R.id.txtContraseña)
+        lblRegistroAct = findViewById(R.id.lblRegistroAct)
+
+        // Configurar el botón de inicio de sesión
         btnLogin.setOnClickListener {
-            val intent = Intent(this, HomeClient::class.java)
-            startActivity(intent)
+            loginUser()
         }
 
         // Configurar el TextView para ir a RegisterActivity
-        val lblRegistroAct = findViewById<TextView>(R.id.lblRegistroAct)
         lblRegistroAct.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun loginUser() {
+        val email = txtEmail.text.toString()
+        val password = txtPassword.text.toString()
+
+        if (email.isEmpty() || password.isEmpty()) {
+            showToast("Por favor, completa todos los campos")
+            return
+        }
+
+        // Iniciar sesión con email y contraseña
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Inicio de sesión exitoso
+                    showToast("¡Inicio de sesión exitoso!")
+                    val intent = Intent(this, HomeClient::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    // Inicio de sesión fallido
+                    showToast("Inicio de sesión fallido. Verifica tus datos.")
+                }
+            }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
