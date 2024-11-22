@@ -7,29 +7,39 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.ssldevteam.lavandaapp.Oferta
+import com.ssldevteam.lavandaapp.OfertaAdapter
 import com.ssldevteam.lavandaapp.R
 
 class HomeClient : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_home_client)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        // Configuración del RecyclerView
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Configurar los botones con sus respectivos intents
-        val btnHacerOferta = findViewById<Button>(R.id.BtnAgregar)
+        val ofertas = listOf(
+            Oferta("Tu Oferta: Casa Valparaiso", "PENDIENTE", R.drawable.sala1),
+            Oferta("Tu Oferta: Apto Miraflores", "COMPLETADA", R.drawable.sala2),
+            Oferta("Tu Oferta: Apto Arkaparaiso", "PENDIENTE", R.drawable.sala3)
+        )
+
+        recyclerView.adapter = OfertaAdapter(ofertas)
+
+        // Mantener la navegación
+        setupNavigation()
+    }
+
+    private fun setupNavigation() {
         val btnPerfil = findViewById<Button>(R.id.BtnPerfil)
         val btnInicio = findViewById<Button>(R.id.BtnInicio)
 
-        btnHacerOferta.setOnClickListener {
-            val intent = Intent(this, OfertaClient::class.java)
-            startActivity(intent)
-        }
 
         btnPerfil.setOnClickListener {
             val intent = Intent(this, GestionPerfilActivity::class.java)
@@ -37,7 +47,7 @@ class HomeClient : AppCompatActivity() {
         }
 
         btnInicio.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, OfertaClient::class.java)
             startActivity(intent)
         }
     }

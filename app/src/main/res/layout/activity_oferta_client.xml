@@ -68,27 +68,6 @@
         app:srcCompat="@drawable/rosita" />
 
     <TextView
-        android:id="@+id/TxtEscribe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="200dp"
-        android:text="Escribe aqui."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TxtCreaTuOferta" />
-
-    <TextView
-        android:id="@+id/TxtCop"
-        android:layout_width="159dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="96dp"
-        android:text="00.0 COP"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/TxtCuanto" />
-
-    <TextView
         android:id="@+id/TxtCuanto"
         android:layout_width="321dp"
         android:layout_height="70dp"
@@ -98,5 +77,28 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/FondoRosita" />
+
+    <EditText
+        android:id="@+id/txtDescripcion"
+        android:layout_width="340dp"
+        android:layout_height="187dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Escribe aqui"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtDescripcion" />
+
+    <EditText
+        android:id="@+id/txtPrecio"
+        android:layout_width="341dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="0.00"
+        app:layout_constraintStart_toStartOf="@+id/FondoRosita2"
+        app:layout_constraintTop_toTopOf="@+id/FondoRosita2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

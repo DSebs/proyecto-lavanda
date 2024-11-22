@@ -27,13 +27,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="52dp"
         android:fontFamily="@font/be_vietnam_pro"
         android:text="@string/email"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/txtEmail2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -42,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="97dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="105dp"
         android:layout_marginBottom="52dp"
         android:fontFamily="@font/courgette"
@@ -61,30 +63,32 @@
 
     <EditText
         android:id="@+id/txtEmail2"
-        android:layout_width="262dp"
+        android:layout_width="283dp"
         android:layout_height="41dp"
         android:layout_marginStart="44dp"
         android:layout_marginEnd="105dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/lblCedula"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtCedula"
-        android:layout_width="213dp"
-        android:layout_height="42dp"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
         android:layout_marginStart="47dp"
         android:layout_marginEnd="151dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:inputType="numberPassword"
         app:layout_constraintBottom_toTopOf="@+id/lblContraseña2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -103,16 +107,17 @@
 
     <EditText
         android:id="@+id/txtContraseña2"
-        android:layout_width="219dp"
-        android:layout_height="52dp"
+        android:layout_width="277dp"
+        android:layout_height="45dp"
         android:layout_marginStart="46dp"
         android:layout_marginEnd="146dp"
-        android:layout_marginBottom="73dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/rounded_edittext"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
