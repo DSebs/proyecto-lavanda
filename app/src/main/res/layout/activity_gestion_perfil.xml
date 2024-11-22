@@ -10,18 +10,18 @@
 
     <ImageView
         android:id="@+id/imgPerfilUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="169dp"
+        android:layout_height="138dp"
         android:layout_marginStart="141dp"
         android:layout_marginTop="172dp"
         android:layout_marginEnd="142dp"
         android:layout_marginBottom="24dp"
+        android:src="@drawable/gatita"
         app:layout_constraintBottom_toTopOf="@+id/txtNombreUsuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtNombreUsuario"
@@ -30,7 +30,7 @@
         android:layout_marginStart="88dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/be_vietnam_pro"
-        android:text="Nombre del Usuario"
+        android:text="Santiago Cardenas "
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,9 +38,9 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="266dp"
-        android:layout_height="175dp"
-        android:layout_marginStart="72dp"
+        android:layout_width="332dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="37dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,12 +63,12 @@
 
     <TextView
         android:id="@+id/lblCorreo"
-        android:layout_width="73dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="84dp"
+        android:layout_width="292dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/josefin_sans"
-        android:text="Correo: "
+        android:text=" Correo: santiago@gmail.com"
         android:textColor="#3B166A"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,12 +76,12 @@
 
     <TextView
         android:id="@+id/lblTelefono"
-        android:layout_width="98dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="290dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/josefin_sans"
-        android:text="Telefono: "
+        android:text="Telefono: 300 6634197"
         android:textColor="#3B166A"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,12 +89,12 @@
 
     <TextView
         android:id="@+id/lblDireccion"
-        android:layout_width="98dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="84dp"
+        android:layout_width="291dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/josefin_sans"
-        android:text="Direccion: "
+        android:text="Direccion: Cra 2a N 65-64"
         android:textColor="#3B166A"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"

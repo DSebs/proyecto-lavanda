@@ -1,21 +1,31 @@
 package com.ssldevteam.lavandaapp.frames
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.ssldevteam.lavandaapp.Oferta
+import com.ssldevteam.lavandaapp.OfertaRepository
 import com.ssldevteam.lavandaapp.R
 
 class OfertaClient : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_oferta_client)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val btnOfertar = findViewById<Button>(R.id.BtnOfertar)
+
+        btnOfertar.setOnClickListener {
+            OfertaRepository.ofertas.add(
+                Oferta("Nueva Oferta", "PENDIENTE", OfertaRepository.getRandomImage())
+            )
+
+            Toast.makeText(this, "¡Oferta creada!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HomeClient::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
